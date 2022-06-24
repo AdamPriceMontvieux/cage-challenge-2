@@ -15,6 +15,6 @@ services:
               device_ids: ['1']
               capabilities: [gpu]
     volumes:
-      - /home/adamprice/Cage-Challenge/CybORG/CybORG:/tf/Cage
+      - /home/adamprice/cage-challenge-2/CybORG/CybORG:/tf/Cage
     ports:
       - 8888:8888 
