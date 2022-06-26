@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  gcpn:
+    build:
+        context: .
+        dockerfile : Dockerfile
+        shm_size: '84gb'
+    shm_size: '84gb'  
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['1']
+              capabilities: [gpu]
+    volumes:
+      - /home/adamprice/cage-challenge-2/CybORG/CybORG:/tf/Cage
+    ports:
+      - 8888:8888 
